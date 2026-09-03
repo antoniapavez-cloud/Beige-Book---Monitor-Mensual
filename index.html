@@ -521,6 +521,7 @@ const STATUS = {
 // ─── DATA ────────────────────────────────────────────────────────
 // MONTHS: array of month keys in chronological order (newest first = displayed first)
 const MONTHS = [
+  'aug2026',
   'jun2026',
   'may2026',
   'apr2026',
@@ -529,6 +530,158 @@ const MONTHS = [
 ];
 
 const DATA = {
+  'aug2026': {
+    label: 'Aug 2026',
+    publishedDate: '03 Sep 2026',
+    fullText: `<h4>Overall Economic Activity</h4>
+<p>Economic activity increased modestly since early July. <strong>Ten of the twelve Federal Reserve Districts reported growth in the slight to moderate range</strong>; two Districts reported no change. Consumer spending grew slightly on balance; reports reflected both <strong>heightened price sensitivity on the one hand and solid high-end purchases on the other</strong>. Auto sales were mostly subdued, dampened by downbeat consumer confidence, high fuel prices, and rising financing costs. Tourism activity increased. Notably, airlines reported strong demand despite higher airfares. <strong>Manufacturing activity picked up across most Districts</strong>, with some highlighting ongoing strength in demand for defense and data center-related orders. Services firms reported slight to modest increases in activity. Financial conditions improved slightly as loan volumes remained solid or increased across most Districts. <strong>Residential construction declined while nonresidential construction increased</strong> on balance, with some Districts noting a high concentration of activity related to data center projects. Agriculture conditions saw slight improvement but generally remained strained; the livestock sector was strong while conditions were stressed among crop producers. The general outlook for the coming months was positive, but sentiment was mixed across sectors, with contacts reporting <strong>heightened uncertainty surrounding the effects of higher energy prices, policy, and international conflict</strong>.</p>
+
+<h4>Labor Markets</h4>
+<p>Employment rose very slightly overall, with <strong>three Districts showing modest gains in employment, four reporting slight gains, and five Districts experiencing no change</strong>. Eight Districts saw a change in their pace of growth from the previous report, but there was less overall dispersion among Districts. Healthy labor demand was seen most frequently in <strong>manufacturing, construction, and some service sectors</strong>, while retail and hospitality sectors saw falling labor demand. Labor availability was mixed. Skilled trades and technical workers were difficult to find. Districts also reported <strong>both positive and negative effects of artificial intelligence on labor demand</strong>. Wage growth was modest to moderate in most Districts. Significant wage increases were most often connected to demand for skilled workers in construction and manufacturing.</p>
+
+<h4>Prices</h4>
+<p>Prices increased moderately in <strong>eight Districts, with two Districts reporting modest increases, one slight increases, and one robust increases</strong>. Compared with the previous reporting period, the pace of price increases was the same in eight Districts, decreased in three, and increased in one. Input price pressures were notably elevated in manufacturing and construction across multiple Districts, with widespread reports of price increases for <strong>energy, transportation, and raw materials, particularly metals and petrochemicals</strong>. Retail and manufacturing contacts continued to note tariff-related impacts in multiple Districts. Firms also broadly reported <strong>significant health care and insurance cost pressures</strong>. Consumer-facing contacts in a few Districts noted that heightened price sensitivity among customers was putting a limit on their ability to pass through input price increases.</p>`,
+    economy: {
+      status: 'flat',
+      tag: 'Slight Expansion',
+      bullets: [
+        'Activity increased modestly nationwide, with <strong>10 of 12 Districts reporting growth</strong> in the slight to moderate range and 2 Districts reporting no change.',
+        'Manufacturing <strong>picked up across most Districts</strong>, led by continued strength in defense and data center-related orders; nonresidential construction rose while residential construction declined.',
+        'Consumer spending grew slightly, split between <strong>heightened price sensitivity</strong> and resilient high-end purchases; auto sales stayed subdued on financing costs and low confidence.',
+        'Outlook remained positive but mixed by sector, with contacts citing <strong>uncertainty over energy prices, policy, and international conflict</strong>.',
+      ]
+    },
+    consumer: {
+      status: 'flat',
+      tag: 'World Cup Boost',
+      bullets: [
+        'Spending grew slightly on balance, split between <strong>heightened price sensitivity</strong> and solid high-end purchases; auto sales stayed subdued on financing costs and low confidence.',
+        'Boston and New York saw a late lift from <strong>World Cup and summer tourism events</strong> (including Boston\'s tall ships festival), while other Districts reported flat or softer traffic.',
+        'Kansas City noted a temporary <strong>World Cup-related boost early in the period</strong> before restaurant, hotel, and discretionary retail sales slowed as household budgets tightened.',
+        'Retailers increasingly highlighted <strong>trade-down behavior</strong>: private-label and discount-store gains in Atlanta and Chicago, alongside stronger demand for auto repairs over new purchases.',
+      ]
+    },
+    prices: {
+      status: 'hot',
+      tag: 'Energy Pressure',
+      bullets: [
+        'Prices rose moderately in <strong>8 Districts, with 2 modest, 1 slight, and 1 robust</strong> increases; the pace was the same or slower than the prior period in 11 of 12 Districts.',
+        'Input cost pressures stayed elevated in manufacturing and construction, with widespread increases for <strong>energy, transportation, and raw materials</strong>, particularly metals and petrochemicals.',
+        'Tariffs continued to add to costs in multiple Districts, while firms broadly reported <strong>significant health care and insurance cost pressures</strong>.',
+        'Pass-through remained limited in places: Philadelphia and Cleveland cited <strong>customer price sensitivity capping increases</strong>, even as nonlabor costs kept climbing.',
+      ]
+    },
+    labor: {
+      status: 'pos',
+      tag: 'Jobs Picking Up',
+      bullets: [
+        'Employment rose very slightly overall: <strong>3 Districts reported modest gains, 4 slight gains</strong>, and 5 saw no change — a similar overall pace to the prior period.',
+        'Healthy labor demand concentrated in <strong>manufacturing, construction, and select services</strong>, while retail and hospitality saw softening demand.',
+        'Skilled trades and technical workers remained hard to find nationwide; AI had <strong>mixed effects on labor demand</strong> — boosting some roles while displacing others, notably entry-level tech.',
+        'Wage growth stayed modest to moderate, with the strongest increases tied to <strong>demand for skilled construction and manufacturing workers</strong>.',
+      ]
+    },
+    manufacturing: {
+      status: 'pos',
+      tag: 'Slight Growth',
+      bullets: [
+        'Manufacturing activity picked up across most Districts, with continued strength in <strong>defense and data center-related orders</strong>.',
+        'Cleveland reported demand for manufactured goods <strong>growing robustly</strong>, while Philadelphia\'s index "surged to a strong increase," up from a modest gain last period.',
+        'New York manufacturing growth accelerated to a moderate pace, though <strong>supply chain strains emerged in the tech and defense sectors</strong>, lengthening lead times.',
+        'Outlooks strengthened further among manufacturers even as nonmanufacturers grew more cautious, reflecting <strong>data center and defense demand offsetting softer consumer-facing lines</strong>.',
+      ]
+    },
+    residential: {
+      status: 'flat',
+      tag: 'Mixed Signals',
+      bullets: [
+        'Nationally, <strong>residential construction declined while nonresidential construction increased</strong>, with data center projects driving much of the latter.',
+        'New York and Boston saw activity edge higher — <strong>New York rents topped new records</strong> amid tight inventory, while Boston\'s cool spring delayed the usual seasonal surge.',
+        'Philadelphia, Chicago, St. Louis, and San Francisco all reported <strong>slight declines in sales</strong>, citing elevated mortgage rates and affordability pressures.',
+        'Dallas described the housing market as sluggish, with <strong>builders offering deep rate buydowns</strong> and some walking away from underwater lot deals.',
+      ]
+    },
+    commercial: {
+      status: 'flat',
+      tag: 'Mixed by Sector',
+      bullets: [
+        'Nonresidential construction rose on balance nationally, with several Districts citing a <strong>high concentration of activity in data center projects</strong>.',
+        'Manhattan\'s office market hit a <strong>record leasing pace</strong> driven by AI and tech firms, and Atlanta\'s Class A office vacancy fell to single digits, outperforming lower-tier space.',
+        'Richmond reported a typical <strong>seasonal slowdown</strong> in commercial real estate, while data center moratoriums in the DMV area raised concerns about future construction.',
+        'San Francisco described commercial activity as <strong>stable overall</strong>, with continued weakness in office demand outside institutional and infrastructure projects.',
+      ]
+    },
+    banking: {
+      status: 'flat',
+      tag: 'Stable Conditions',
+      bullets: [
+        'Financial conditions <strong>improved slightly nationally</strong>, with loan volumes solid or increasing across most Districts.',
+        'Cleveland and Dallas reported loan demand growing at a <strong>robust pace</strong>, driven by M&A activity and commercial real estate transactions; Dallas noted loan performance improving for the first time since 2022.',
+        'New York flagged <strong>rising delinquencies among consumer borrowers</strong>, with auto lenders increasingly concerned about credit quality.',
+        'Credit standards tightened slightly for <strong>business loans and commercial mortgages</strong> in several Districts, even as residential mortgage demand ticked up in places like New York.',
+      ]
+    },
+    transport: {
+      status: 'flat',
+      tag: 'Modest Growth',
+      bullets: [
+        'Richmond ports saw <strong>moderate growth in cargo volumes</strong>, with both loaded imports and exports surpassing expected growth.',
+        'Dallas reported growth in <strong>air freight tied to AI-driven semiconductor demand</strong>, even as small parcel volumes slipped.',
+        'Chicago and St. Louis both noted <strong>modestly higher trucking and logistics demand</strong>, alongside continued fuel surcharges on invoices.',
+        'New York and Cleveland flagged <strong>supply chain strains in tech and defense-related freight</strong>, with longer lead times for raw materials and components.',
+      ]
+    },
+    agriculture: {
+      status: 'neg',
+      tag: 'Weak Conditions',
+      bullets: [
+        'Conditions saw <strong>slight improvement but remained generally strained</strong>: the livestock sector stayed strong while crop producers remained stressed.',
+        'Kansas City described crop conditions as <strong>subdued amid intensifying drought</strong>, particularly in Nebraska and Kansas, while cattle prices stayed strong and supported profit opportunities.',
+        'Dallas agriculture <strong>deteriorated further on drought</strong>, though wheat and cotton prices improved; conflict in the Black Sea pushed wheat prices markedly higher.',
+        'Chicago farm income expectations for 2026 <strong>improved some from a low level</strong>, with corn and soybean yields expected near record levels despite localized flooding.',
+      ]
+    },
+    energy: {
+      status: 'flat',
+      tag: 'Supply Strained',
+      bullets: [
+        'Atlanta reported oil supply <strong>constrained by renewed conflict escalation</strong> in the Middle East, with Strait of Hormuz navigation challenges pressuring inventories and prices.',
+        'Dallas oilfield activity ticked up, but contacts described it as a <strong>previously planned increase rather than a price-driven one</strong>, with upstream shale spending staying disciplined.',
+        'Kansas City power generation capacity grew at a <strong>robust pace</strong>, led by a large New Mexico wind project, as data centers drove historically strong electricity demand.',
+        'Atlanta anticipated further constraints into <strong>early 2027 as refiners can no longer defer maintenance</strong>, adding to concerns about tight domestic supply.',
+      ]
+    },
+    tech: {
+      status: 'pos',
+      tag: 'AI Drives Sector',
+      bullets: [
+        'Data center-related demand remained a <strong>key driver of manufacturing, construction, and power demand</strong> nationally, cited across multiple Districts.',
+        'New York reported <strong>supply chain strains in the tech and defense sectors</strong>, with AI engineers still difficult to source even as entry-level tech and administrative hiring softened.',
+        'San Francisco contacts grew <strong>more price-conscious about fee-based generative AI tools</strong>, weighing costs against productivity benefits.',
+        'Kansas City noted price-insensitive technology companies remained more focused on <strong>"speed to power" than the price of power</strong> for new data center buildouts.',
+      ]
+    },
+    geopolitics: {
+      status: 'neg',
+      tag: 'Conflict Escalates',
+      bullets: [
+        'Atlanta explicitly cited <strong>renewed conflict escalation in the Middle East</strong>, disrupting Strait of Hormuz navigation and constraining oil supply and inventories.',
+        'Cleveland described continued <strong>"shockwaves through the chemical supply chain"</strong> from elevated fuel costs tied to the conflict, now in its tenth consecutive period of robust nonlabor cost pressure.',
+        'St. Louis, Dallas, and Richmond all cited <strong>elevated fuel and petrochemical costs</strong> tied to the conflict as an ongoing drag on outlooks.',
+        'Contacts broadly cited <strong>uncertainty over energy prices, tariffs, and international conflict</strong> as the dominant sources of caution in hiring, pricing, and investment decisions.',
+      ]
+    },
+    vulnerable: {
+      status: 'neg',
+      tag: 'Social Demand Rising',
+      bullets: [
+        'Community-serving organizations continued to face <strong>heightened demand for housing, food, and health-care assistance</strong> alongside ongoing funding challenges.',
+        'Dallas nonprofits reported sustained high demand as households faced mounting costs; <strong>SNAP cuts are expected to push up food insecurity</strong> further.',
+        'Dallas hospitals were adapting to the <strong>end of enhanced ACA premium tax credits</strong>, which raised monthly payments and deductibles and reduced elective care utilization.',
+        'Atlanta reported financial strain among low- and moderate-income households <strong>worsening over the summer</strong>, with rising reliance on credit cards, payday loans, and "buy now, pay later" services.',
+      ]
+    },
+  },
   'jan2026': {
     label: 'Jan 2026',
     fullText: `<h4>Overall Economic Activity</h4>
